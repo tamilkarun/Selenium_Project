@@ -2,6 +2,7 @@ package tamil.selenium.maven;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -79,6 +80,8 @@ System.out.println("Executed Test1");
 	}
 	@Test
 	public void k4s(){
+		
+		
 		driver.manage().window().maximize();
 		driver.get("https://advance.kno.com");
 		System.out.println(driver.getCurrentUrl());
@@ -88,13 +91,57 @@ System.out.println("Executed Test1");
 		driver.findElement(By.cssSelector("div[class='field btn-container'] > a")).click();
 		WebDriverWait wait = new WebDriverWait(driver,40);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("user-name")));
+		
+		driver.findElement(By.xpath("//a[contains(.,'User Report')]")).isDisplayed();
+		driver.findElement(By.xpath("//a[contains(.,'Content Report')]")).isDisplayed();
 		driver.findElement(By.xpath("//a[contains(.,'Report')]")).click();
-		driver.findElement(By.xpath("//a[contains(.,'Manage Users or Groups')]")).click();
+		
+		if( driver.findElement(By.xpath("//a[contains(.,'User Report')]")).isDisplayed()){
+			System.out.println("$$$$ Element is Visible");
+		}else{
+			System.out.println("$$$$ Element is InVisible");
+		}
+		//ExpectedConditions.invisibilityOfElementLocated(By.xpath("a[contains(.,'User Report')]"));
+		//ExpectedConditions.invisibilityOfElementLocated(By.xpath("a[contains(.,'Content Report')]"));
+		
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//a[contains(.,'Manage Books')]")));
+		
+		driver.findElement(By.xpath("//a[contains(.,'Allocate Licenses')]")).isDisplayed();
+		driver.findElement(By.xpath("//a[contains(.,'Distribute Books')]")).isDisplayed();
 		driver.findElement(By.xpath("//a[contains(.,'Manage Books')]")).click();;
-		driver.findElement(By.xpath("//a[contains(.,'Setup')]")).click();
+		ExpectedConditions.invisibilityOfElementLocated(By.xpath("a[contains(.,'Allocate Licenses')]"));
+		ExpectedConditions.invisibilityOfElementLocated(By.xpath("a[contains(.,'Distribute Books')]"));
+		
+		
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//a[contains(.,'Kno Administrative')]")));
+		
+		driver.findElement(By.xpath("//a[contains(.,'Set up Institution Identifier')]")).isDisplayed();
+		driver.findElement(By.xpath("//a[contains(.,'License Code Management')]")).isDisplayed();
 		driver.findElement(By.xpath("//a[contains(.,'Kno Administrative')]")).click();
+		ExpectedConditions.invisibilityOfElementLocated(By.xpath("a[contains(.,'Set up Institution Identifier')]"));
+		ExpectedConditions.invisibilityOfElementLocated(By.xpath("a[contains(.,'License Code Management')]"));
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//a[contains(.,'Manage Users or Groups')]")));
+		
+		driver.findElement(By.xpath("//a[contains(.,'Add User')]")).isDisplayed();
+		driver.findElement(By.xpath("//a[contains(.,'Administer User')]")).isDisplayed();
+		driver.findElement(By.xpath("//a[contains(.,'Manage Users or Groups')]")).click();
+		ExpectedConditions.invisibilityOfElementLocated(By.xpath("a[contains(.,'Add User')]"));
+		ExpectedConditions.invisibilityOfElementLocated(By.xpath("a[contains(.,'Administer User')]"));
+		
+		
+		
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//a[contains(.,'Setup')]")));
+		
+		driver.findElement(By.xpath("//a[contains(.,'Import Devices Configuration')]")).isDisplayed();
+		driver.findElement(By.xpath("//a[contains(.,'Admin Settings')]")).isDisplayed();
+		driver.findElement(By.xpath("//a[contains(.,'Setup')]")).click();
+		ExpectedConditions.invisibilityOfElementLocated(By.xpath("a[contains(.,'Import Devices Configuration')]"));
+		ExpectedConditions.invisibilityOfElementLocated(By.xpath("a[contains(.,'Admin Settings')]"));
+		
+		
+		
 		driver.findElement(By.className("hd")).click();
 		driver.findElement(By.className("user-name")).click();
-		driver.findElement(By.linkText("Log Out")).click();
+		//driver.findElement(By.linkText("Log Out")).click();
 	}
 }
