@@ -80,11 +80,21 @@ System.out.println("Executed Test1");
 	@Test
 	public void k4s(){
 		driver.manage().window().maximize();
-		driver.get("https://advance.qa.kno.com");
+		driver.get("https://advance.kno.com");
 		System.out.println(driver.getCurrentUrl());
-		driver.findElement(By.id("email")).sendKeys("tamil@test.kno");
+		driver.findElement(By.id("email")).sendKeys("tamil");
 		driver.findElement(By.id("password")).sendKeys("123456");
-		driver.findElement(By.linkText("Sign In")).click();
+		//driver.findElement(By.linkText("Sign In")).click();
+		driver.findElement(By.cssSelector("div[class='field btn-container'] > a")).click();
+		WebDriverWait wait = new WebDriverWait(driver,40);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("user-name")));
+		driver.findElement(By.xpath("//a[contains(.,'Report')]")).click();
+		driver.findElement(By.xpath("//a[contains(.,'Manage Users or Groups')]")).click();
+		driver.findElement(By.xpath("//a[contains(.,'Manage Books')]")).click();;
+		driver.findElement(By.xpath("//a[contains(.,'Setup')]")).click();
+		driver.findElement(By.xpath("//a[contains(.,'Kno Administrative')]")).click();
+		driver.findElement(By.className("hd")).click();
+		driver.findElement(By.className("user-name")).click();
+		driver.findElement(By.linkText("Log Out")).click();
 	}
-	
 }
