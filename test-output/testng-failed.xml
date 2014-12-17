@@ -5,7 +5,7 @@
     <classes>
       <class name="tamil.selenium.maven.Basicactioncmds">
         <methods>
-          <include name="SeldrpdwnByIdx"/>
+          <include name="k4s"/>
           <include name="beforetest"/>
         </methods>
       </class> <!-- tamil.selenium.maven.Basicactioncmds -->

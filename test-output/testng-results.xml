@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4270" started-at="2014-12-16T20:52:43Z" finished-at="2014-12-16T20:52:47Z">
+  <suite name="Default suite" duration-ms="9629" started-at="2014-12-17T00:48:50Z" finished-at="2014-12-17T00:49:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4270" started-at="2014-12-16T20:52:43Z" finished-at="2014-12-16T20:52:47Z">
+    <test name="Default test" duration-ms="9629" started-at="2014-12-17T00:48:50Z" finished-at="2014-12-17T00:49:00Z">
       <class name="tamil.selenium.maven.Basicactioncmds">
-        <test-method status="PASS" signature="beforetest()[pri:0, instance:tamil.selenium.maven.Basicactioncmds@3d5b89c]" name="beforetest" is-config="true" duration-ms="2027" started-at="2014-12-16T12:52:43Z" finished-at="2014-12-16T12:52:45Z">
+        <test-method status="PASS" signature="beforetest()[pri:0, instance:tamil.selenium.maven.Basicactioncmds@52e80740]" name="beforetest" is-config="true" duration-ms="2009" started-at="2014-12-16T16:48:50Z" finished-at="2014-12-16T16:48:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method status="PASS" signature="k4s()[pri:0, instance:tamil.selenium.maven.Basicactioncmds@3d5b89c]" name="k4s" duration-ms="2234" started-at="2014-12-16T12:52:45Z" finished-at="2014-12-16T12:52:47Z">
+        <test-method status="PASS" signature="k4s()[pri:0, instance:tamil.selenium.maven.Basicactioncmds@52e80740]" name="k4s" duration-ms="7610" started-at="2014-12-16T16:48:52Z" finished-at="2014-12-16T16:49:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- k4s -->
