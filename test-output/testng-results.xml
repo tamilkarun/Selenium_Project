@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[2014-12-23T03:06:05.734Z :  Verify Login Text<br/>]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6538" started-at="2014-12-17T23:10:49Z" finished-at="2014-12-17T23:10:56Z">
+  <suite name="Default suite" duration-ms="16356" started-at="2014-12-23T23:05:49Z" finished-at="2014-12-23T23:06:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6538" started-at="2014-12-17T23:10:49Z" finished-at="2014-12-17T23:10:56Z">
+    <test name="Default test" duration-ms="16356" started-at="2014-12-23T23:05:49Z" finished-at="2014-12-23T23:06:06Z">
       <class name="tamil.selenium.maven.Basicactioncmds">
-        <test-method status="PASS" signature="beforetest()[pri:0, instance:tamil.selenium.maven.Basicactioncmds@98c5e67]" name="beforetest" is-config="true" duration-ms="2008" started-at="2014-12-17T15:10:49Z" finished-at="2014-12-17T15:10:51Z">
+        <test-method status="PASS" signature="beforetest()[pri:0, instance:tamil.selenium.maven.Basicactioncmds@6e3e5a91]" name="beforetest" is-config="true" duration-ms="3568" started-at="2014-12-23T15:05:49Z" finished-at="2014-12-23T15:05:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method status="PASS" signature="k4s()[pri:0, instance:tamil.selenium.maven.Basicactioncmds@98c5e67]" name="k4s" duration-ms="4520" started-at="2014-12-17T15:10:51Z" finished-at="2014-12-17T15:10:56Z">
+        <test-method status="PASS" signature="k4s()[pri:0, instance:tamil.selenium.maven.Basicactioncmds@6e3e5a91]" name="k4s" duration-ms="12676" started-at="2014-12-23T15:05:53Z" finished-at="2014-12-23T15:06:05Z">
           <reporter-output>
+            <line>
+              <![CDATA[2014-12-23T03:06:05.734Z :  Verify Login Text<br/>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- k4s -->
+        <test-method status="PASS" signature="aftertest()[pri:0, instance:tamil.selenium.maven.Basicactioncmds@6e3e5a91]" name="aftertest" is-config="true" duration-ms="85" started-at="2014-12-23T15:06:05Z" finished-at="2014-12-23T15:06:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftertest -->
       </class> <!-- tamil.selenium.maven.Basicactioncmds -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

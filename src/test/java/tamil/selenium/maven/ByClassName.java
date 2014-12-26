@@ -14,7 +14,6 @@ public class ByClassName {
 
 	WebDriver driver = new FirefoxDriver();
 	
-	
 
 	@Test
 	public void test(){
