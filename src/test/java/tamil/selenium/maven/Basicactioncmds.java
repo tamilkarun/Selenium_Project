@@ -262,5 +262,7 @@ System.out.println("Executed Test1");
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("user-name")));		
 		
 	}
+	//@FindBy(id="password")
+	//WebElement Psswd;
 	
 }
